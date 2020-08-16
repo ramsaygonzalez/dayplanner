@@ -4,24 +4,84 @@ $(document).ready(function () {
     console.log(now)
     $("#currentDay").append(now)
 
-    var nineText = localStorage.getItem("nine");
+    var currentTime = moment().hour();
+    console.log(currentTime)
 
+    
+
+    $("#local-delete").on("click", function () {
+        localStorage.clear();
+        location.href = "index.html"
+    });
+
+
+    var nineText = localStorage.getItem("nine");
     $("#nine-text").val(nineText)
 
-    // var nine = $("#nine").text();
-    // var ten = $("#ten").text();
-    // var eleven = $("#eleven").text();
-    // var twelve = $("#twelve").text();
-    // var one = $("#one").text();
-    // var two = $("#two").text();
-    // var three = $("#three").text();
-    // var four = $("#four").text();
-    // var five = $("#five").text();
+    var tenText = localStorage.getItem("ten");
+    $("#ten-text").val(tenText)
+
+    var elevenText = localStorage.getItem("eleven");
+    $("#eleven-text").val(elevenText)
+
+    var twelveText = localStorage.getItem("twelve");
+    $("#twelve-text").val(twelveText)
+
+    var oneText = localStorage.getItem("one");
+    $("#one-text").val(oneText)
+
+    var twoText = localStorage.getItem("two");
+    $("#two-text").val(twoText)
+
+    var threeText = localStorage.getItem("three");
+    $("#three-text").val(threeText)
+
+    var fourText = localStorage.getItem("four");
+    $("#four-text").val(fourText)
+
+    var fiveText = localStorage.getItem("five");
+    $("#five-text").val(fiveText)
+
 
     $("#nine-button").on("click", function () {
         var nine = $("#nine-text").val();
         localStorage.setItem("nine", nine);
     });
-    // localStorage.setItem("ten", ten);
-    // localStorage.setItem("eleven", eleven);
+
+    $("#ten-button").on("click", function () {
+        var ten = $("#ten-text").val();
+        localStorage.setItem("ten", ten);
+    });
+
+    $("#eleven-button").on("click", function () {
+        var eleven = $("#eleven-text").val();
+        localStorage.setItem("eleven", eleven);
+    });
+
+    $("#twelve-button").on("click", function () {
+        var twelve = $("#twelve-text").val();
+        localStorage.setItem("twelve", twelve);
+    });
+    $("#one-button").on("click", function () {
+        var one = $("#one-text").val();
+        localStorage.setItem("one", one);
+    });
+    $("#two-button").on("click", function () {
+        var two = $("#two-text").val();
+        localStorage.setItem("two", two);
+    });
+    $("#three-button").on("click", function () {
+        var three = $("#three-text").val();
+        localStorage.setItem("three", three);
+    });
+    $("#four-button").on("click", function () {
+        var four = $("#four-text").val();
+        localStorage.setItem("four", four);
+    });
+    $("#five-button").on("click", function () {
+        var five = $("#five-text").val();
+        localStorage.setItem("five", five);
+    });
+
+
 });
