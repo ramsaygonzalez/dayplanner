@@ -4,7 +4,7 @@ $(document).ready(function () {
     console.log(now)
     $("#currentDay").append(now)
 
-    var currentTime = moment().hour();
+    var currentTime = moment().hours();
     console.log(currentTime)
 
     function setBackground() {
