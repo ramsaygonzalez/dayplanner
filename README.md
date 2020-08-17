@@ -15,7 +15,7 @@
 
 ### 🏠 [Homepage](https://github.com/ramsaygonzalez/dayplanner)
 
-### ✨ [Demo](https://github.com/ramsaygonzalez/dayplanner)
+### ✨ [Demo](https://ramsaygonzalez.github.io/dayplanner/)
 
 ## Author
 
