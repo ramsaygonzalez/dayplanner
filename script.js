@@ -7,7 +7,27 @@ $(document).ready(function () {
     var currentTime = moment().hour();
     console.log(currentTime)
 
-    
+    function setBackground() {
+        $(".time").each(function () {
+            var itemTime = $(this).attr("class").split(" ").pop()
+            console.log(itemTime)
+
+            if (itemTime < currentTime) {
+                $("input").addClass("past");
+            } else if (itemTime === currentTime) {
+                $("input").removeClass("past");
+                $("input").addClass("present");
+            }
+            else {
+                $("input").removeClass("past");
+                $("input").removeClass("present");
+                $("input").addClass("future");
+            }
+        })
+
+    }
+
+    setBackground()
 
     $("#local-delete").on("click", function () {
         localStorage.clear();
